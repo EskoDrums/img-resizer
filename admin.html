@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin — Telegram Users</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Admin — Telegram Users</h1>
+
+    <div id="auth">
+      <p>Enter admin key to load users:</p>
+      <input type="password" id="adminKey" placeholder="Admin key" />
+      <button id="loadBtn">Load Users</button>
+    </div>
+
+    <div id="dashboard" style="display:none;">
+      <p><strong>Total users:</strong> <span id="count">0</span></p>
+      <button id="downloadTxt">Download IDs (.txt)</button>
+      <button id="refreshBtn">Refresh</button>
+      <pre id="listArea" style="text-align:left; max-height:300px; overflow:auto; background:#f7f7f7; padding:10px; border-radius:8px;"></pre>
+    </div>
+
+    <small>Keep your admin key secret. Do not expose it in public code.</small>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

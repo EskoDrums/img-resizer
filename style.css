@@ -1,0 +1,19 @@
+* { box-sizing: border-box; }
+body { margin:0; font-family:"Poppins",sans-serif; background:linear-gradient(135deg,#6dd5fa,#ffffff); display:flex; align-items:center; justify-content:center; min-height:100vh; padding:20px; }
+.container { background:#fff; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.1); width:380px; max-width:100%; padding:24px; text-align:center; }
+h1 { margin-bottom:14px; font-size:1.4rem; color:#333; }
+.upload-area { border:2px dashed #6dd5fa; border-radius:12px; padding:20px; cursor:pointer; transition:all .3s; }
+.upload-area.dragover { animation: glow 1.5s infinite alternate; }
+@keyframes glow { from{box-shadow:0 0 10px rgba(33,147,176,0.2);} to{box-shadow:0 0 20px rgba(33,147,176,0.5);} }
+.upload-area img { max-width:100%; border-radius:10px; margin-top:10px; opacity:0; transition:opacity .5s; }
+.upload-area img.show { opacity:1; }
+.controls { margin-top:20px; }
+.inputs { display:flex; justify-content:center; gap:10px; flex-wrap:wrap; }
+input[type="number"], input[type="password"] { width:100px; padding:8px; border:1px solid #ccc; border-radius:8px; text-align:center; font-size:14px; }
+.buttons { margin-top:12px; }
+button { background:#6dd5fa; color:white; border:none; border-radius:8px; padding:10px 16px; margin:6px 4px; cursor:pointer; font-weight:600; position:relative; overflow:hidden; }
+button:hover { background:#2193b0; }
+.ripple::after { content:""; position:absolute; background:rgba(255,255,255,0.6); border-radius:50%; transform:scale(0); width:100px; height:100px; opacity:0; pointer-events:none; transition:transform .6s, opacity 1s; }
+button:active::after { transform:scale(3); opacity:1; transition:0s; }
+small { color:#777; display:block; margin-top:6px; font-size:13px; }
+@media (max-width:450px){ .container{width:100%; padding:16px;} input[type="number"]{width:80px;} button{padding:8px 12px;} }

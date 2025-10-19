@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Image Resizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Smart Image Resizer</h1>
+
+    <div class="upload-area" id="uploadArea">
+      <p>Click or drop image here</p>
+      <input type="file" id="upload" accept="image/*" hidden />
+      <img id="preview" alt="">
+    </div>
+
+    <div class="controls">
+      <div class="inputs">
+        <input type="number" id="width" placeholder="Width">
+        <input type="number" id="height" placeholder="Height">
+      </div>
+      <div class="buttons">
+        <button id="resizeBtn" class="ripple">Resize</button>
+        <button id="downloadBtn" class="ripple">Download</button>
+      </div>
+    </div>
+
+    <small>Resize your image easily in your browser.</small>
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
