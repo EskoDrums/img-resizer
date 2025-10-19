@@ -2,7 +2,7 @@
 import { MongoClient } from "mongodb";
 
 const uri = process.env.MONGODB_URI;
-const ADMIN_KEY = process.env.ADMIN_KEY || "1997";
+const ADMIN_KEY = process.env.ADMIN_KEY || "";
 if (!uri) throw new Error("MONGODB_URI not set");
 
 let cachedClient = global._mongoClient || null;
